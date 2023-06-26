@@ -32,6 +32,9 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+.overlay.white {
+  color: white;
+}
 
 .project-grid {
   display: grid;
@@ -100,5 +103,8 @@ body {
       "cup cup"
       "foam foam"
       "dimensional dimensional";
+  }
+  .project .overlay {
+    font-size: 24px;
   }
 }
