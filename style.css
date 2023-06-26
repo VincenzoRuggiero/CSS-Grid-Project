@@ -1,6 +1,39 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0;
+  font-weight: bold;
+}
+
+.navbar .left {
+  font-size: 32px;
+}
+
+.navbar .right {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .right a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar .right a:hover {
+  text-decoration: underline;
+}
+
+.navbar .right img {
+  width: 24px;
+  height: 24px;
+}
+
 .project {
   position: relative;
 }
