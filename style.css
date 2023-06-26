@@ -6,12 +6,16 @@ body {
   max-width: 90%;
   padding: 0 16px;
 }
-header.navbar {
+
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 0;
   font-weight: bold;
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
 }
 
 .navbar .left {
@@ -38,6 +42,24 @@ header.navbar {
   height: 24px;
 }
 
+/* HAMBURGER MENU */
+/* .navbar .hamburger {
+  height: 50px;
+  width: 50px;
+} */
+
+.navbar .hamburger {
+  display: none;
+}
+.navbar .bar {
+  background-color: #000;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+/* GRIDS */
 .project {
   position: relative;
 }
@@ -115,12 +137,14 @@ header.navbar {
   grid-area: dimensional;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 64px;
   font-weight: bold;
 }
 
+/* MEDIA BREAKPOINTS */
 @media only screen and (max-width: 1100px) {
   .container {
     max-width: 100%;
@@ -137,6 +161,20 @@ header.navbar {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    padding: 16px 24px;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+  .navbar .right {
+    display: none;
+  }
   .project-grid {
     grid-template-areas:
       "eth eth"
@@ -147,6 +185,7 @@ header.navbar {
       "cup cup"
       "foam foam"
       "dimensional dimensional";
+    margin-top: 80px;
   }
   .project .overlay {
     font-size: 24px;
